@@ -10,7 +10,7 @@ load_dotenv()
 MONGODB_CONNECT = os.getenv("MONGODB_CONNECT")
 # LOCALDB = os.getenv("LOCALDB")
 
-mongoclient = pymongo.MongoClient(MONGODB_CONNECT)
+mongoclient = pymongo.MongoClient("mongodb+srv://pavan809:Pavan%40123@cluster0.2cxka.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 lmam = mongoclient["leave_me_a_message"]
 
