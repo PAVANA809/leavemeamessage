@@ -17,7 +17,7 @@ bot = telebot.TeleBot(API_KEY)
 def greet(message):
     bot.send_message(message.chat.id, "It is our great pleasure to have you on board! A hearty welcome to you!")
     bot.send_message(
-        message.chat.id, text=str("<b>Enter your username and secrete key used to create account on <a href='http://leavemeamessage.herokuapp.com/'>Leavemeamessage</a> website in the format</b>"), parse_mode='HTML')
+        message.chat.id, text=str("<b>Enter your username and secrete key used to create account on <a href='https://leavemeamessage.herokuapp.com/'>Leavemeamessage</a> website in the format</b>"), parse_mode='HTML')
     bot.send_message(message.chat.id,"uname xxxxxx skey xxxxx")
 
 

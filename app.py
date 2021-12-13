@@ -23,7 +23,7 @@ def generate_link():
     for i in x:
         chat_id = i["chat_id"]
     if chat_id:
-        link = "http://leavemeamessage.herokuapp.com/leavemeamessage/"+uname
+        link = "https://leavemeamessage.herokuapp.com/leavemeamessage/"+uname
         return jsonify({ "link" : link})
     return jsonify({"link": "Telegram bot is not authenticated"})
 
