@@ -3,11 +3,11 @@ import telebot
 # from telegram import ParseMode
 from telebot.types import Message
 from dotenv import load_dotenv
-from app import send
+# from app import send
 import crud
 
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
+# API_KEY = os.getenv('API_KEY')
 host_id = "192.168.1.101"
 
 bot = telebot.TeleBot('5004963820:AAEKRFFX-H7hj8Nz9MM4HQROlPhfqshHAt8')
