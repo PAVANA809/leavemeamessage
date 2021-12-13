@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 MONGODB_CONNECT = os.getenv("MONGODB_CONNECT")
-LOCALDB = os.getenv("LOCALDB")
+# LOCALDB = os.getenv("LOCALDB")
 
 mongoclient = pymongo.MongoClient(MONGODB_CONNECT)
 
