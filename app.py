@@ -23,7 +23,7 @@ def generate_link():
     for i in x:
         chat_id = i["chat_id"]
     if chat_id:
-        link = "http://"+host_id+":5000/leavemeamessage/"+uname
+        link = "http://leavemeamessage.herokuapp.com/leavemeamessage/"+uname
         return jsonify({ "link" : link})
     return jsonify({"link": "Telegram bot is not authenticated"})
 
@@ -111,4 +111,4 @@ def profile():
     return redirect(url_for("login"))
 
 if __name__ == "__main__":
-    app.run(debug=True,host=host_id)
+    app.run(debug=True)
