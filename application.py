@@ -1,7 +1,7 @@
 from subprocess import *
 import time 
 
-Popen('python app.py')
+Popen('python3 app.py')
 time.sleep(1)
-Popen('python tlbot.py')
+Popen('python3 tlbot.py')
 
