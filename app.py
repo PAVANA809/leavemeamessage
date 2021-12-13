@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ifhdafadfgdivdlivhdvdwivwrifwi fp;'
 app.permanent_session_lifetime = timedelta(days=5)
 
-host_id = "192.168.1.101"
+host_id = "192.168.1.104"
 
 @app.route("/")
 def main():
