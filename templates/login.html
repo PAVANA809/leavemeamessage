@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Login-Page{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+<form action="">
+    <input id="uname" type="text" placeholder="Username"><br>
+    <input id="password" type="password" placeholder="Password"><br>
+    <p id="login_error"></p>
+    <button type="button" onclick="login()">Login</button>
+    <p style="display: inline;">or</p>
+    <button type="button"><a href="/register">Register</a></button>
+</form>
+{% endblock %}
