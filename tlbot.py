@@ -29,6 +29,9 @@ def hello(message):
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
     msg = message.text.split()
+    if len(msg) != 4:
+        bot.send_message(message.chat.id, "Format Incorrect")
+        return
     if msg[0] == "uname":
         x = crud.lmam["Users"].count_documents({"Uname":msg[1]})
         if x == 0:

@@ -24,7 +24,7 @@ def user_insert(colle,data):
 
 
 def find_uname(colle,data):
-    return lmam[colle].find(data).count()
+    return lmam[colle].count_documents(data)
 
 
 def update_chat_id(colle,data):
