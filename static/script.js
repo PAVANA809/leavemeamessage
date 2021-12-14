@@ -114,7 +114,11 @@ function generate_link(){
   }).then(res =>{
     return res.json()
   }).then(function(json){
+    if(json.status === "ok"){
     $("#link").html(json.link)
+    }else{
+      $("#msg").html(json.msg)
+    }
   }).catch(function(e){
     console.log(e);
   });
