@@ -1,18 +1,12 @@
 function sendmessage() {
     url = window.location.href.split("/")
     var msg = "";
-    var name = "";
     //msg = document.getElementById("text").value
     msg = $("#text").val()
-    name = $("#name").val()
-    if(name === ""){
-        name = "Anonymous";
-    }
     if(msg === ""){
          alert("Enter somthing")
     }else{
         data = {
-            "Name":name,
             "msg": msg    
             }
         fetch("/send/"+url[4],{

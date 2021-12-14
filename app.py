@@ -40,8 +40,7 @@ def end():
 @app.route("/send/<username>", methods=['GET', 'POST'])
 def send(username):
     data = request.get_json(force=True)
-    msg = "IP: "+str(request.remote_addr)+"\nName: " + \
-        data["Name"] + "\nMsg: " + data["msg"]
+    msg = "Msg: " + data["msg"]
     
     x = crud.lmam["Users"].find({"Uname":username},{"chat_id":1,"_id":0})
     for i in x:
@@ -49,8 +48,7 @@ def send(username):
     bot.sendmessage(chat_id,str(msg))
 
     dat = {
-        "IP": str(request.remote_addr),
-        "Name": data["Name"],
+        "To": username,
         "Msg": data["msg"]
     }
     crud.message_insert("messages",dat)
