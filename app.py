@@ -3,10 +3,17 @@ from flask.globals import request
 from datetime import timedelta
 import lmam_bot as bot
 import crud
+import dotenv
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+SECRETE_KEY = os.getenv('SECRETE_KEY')
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ifhdafadfgdivdlivhdvdwivwrifwi fp;'
+app.config['SECRET_KEY'] = SECRETE_KEY
 app.permanent_session_lifetime = timedelta(days=5)
 
 host_id = "192.168.1.104"
