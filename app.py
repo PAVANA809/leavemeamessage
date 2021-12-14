@@ -23,11 +23,11 @@ def generate_link():
     for i in x:
         chat_id = i["chat_id"]
     if chat_id:
-        link = "https://leavemeamessage.herokuapp.com/leavemeamessage/"+uname
+        link = "https://leavemeamessage.herokuapp.com/message/"+uname
         return jsonify({ "link" : link})
     return jsonify({"link": "Telegram bot is not authenticated"})
 
-@app.route("/leavemeamessage/<username>")
+@app.route("/message/<username>")
 def home(username):
     return render_template("leavemeamessage.html")
 
