@@ -22,7 +22,20 @@ function sendmessage() {
         })  
      }
 }
-var flag = 0
+
+var nameflag = 0
+
+function checkname(){
+  x = $("#uname").val();
+  if(x.split(" ").length > 1){
+      $("#unameerror").html("Do not include spaces in your username");
+  }else{
+    $("#unameerror").html("")
+  }
+}
+
+var flag1 = 0
+var flag2 = 0
 function pwreq(){
     pw = $("#password").val()
     if( pw.length < 7){
@@ -31,7 +44,7 @@ function pwreq(){
         return
     }else{
         $("#plength").html("");
-        flag = 1
+        flag1 = 1
         checkpassword()
     }
 }
@@ -41,16 +54,16 @@ function checkpassword(){
     pw2 = $("#pw").val()
     if(pw1 !== pw2){
         $("#err").html("Password Mismatch")
-        flag = 0
+        flag2 = 0
         return
     }else{
         $("#err").html("")
-        flag = 1
+        flag2 = 1
     }
 }
 
 function register(){
-    if(flag == 0){
+    if(flag1 === 0 || flag2 === 0){
         alert("Enter password properly")
         return
     }
