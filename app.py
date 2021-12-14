@@ -13,7 +13,7 @@ SECRETE_KEY = os.getenv('SECRETE_KEY')
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = SECRETE_KEY
+app.config['SECRET_KEY'] = 'fkfdydjg7r57gyi7879t8o787rgil7.,;jgyuf'
 app.permanent_session_lifetime = timedelta(days=5)
 
 host_id = "192.168.1.104"
