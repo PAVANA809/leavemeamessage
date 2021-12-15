@@ -47,7 +47,7 @@ def end():
 @app.route("/send/<username>", methods=['GET', 'POST'])
 def send(username):
     data = request.get_json(force=True)
-    msg = "Msg: " + data["msg"]
+    msg = data["msg"]
     
     x = crud.lmam["Users"].find({"Uname":username},{"chat_id":1,"_id":0})
     for i in x:
