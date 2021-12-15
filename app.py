@@ -36,7 +36,7 @@ def generate_link():
 
 @app.route("/message/<username>")
 def home(username):
-    return render_template("leavemeamessage.html")
+    return render_template("leavemeamessage.html",user=username)
 
 
 @app.route("/end")

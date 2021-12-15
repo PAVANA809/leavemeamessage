@@ -2,15 +2,15 @@
 {% block title %}Profile-Page{% endblock %}
 
 {% block content %}
-<h1>Profile</h1>
+<center><h2 class="mb-3">Profile</h2></center>
 <p style="border-bottom: 2px solid white;
     border-top: 2px solid white;">{{user}}</p>
 
 <p style="display: inline;">Enter your username and secrete key in this bot</p>
-<a style="border: black solid 1px; background-color: rgb(127, 127, 247);border-radius: 4px ;" href="https://t.me/Leave_me_a_message_bot">Telegram Bot</a>
+<a style="" class="btn btn-primary" href="https://t.me/Leave_me_a_message_bot">Telegram Bot</a>
 <p id="msg" style="margin-top: 15px; margin-bottom: 0px;"></p>
-<p>To generate link <button type="button" onclick="generate_link()">Click Here</button></p>
+<p>To generate link <br> <button type="button" class="btn btn-primary" onclick="generate_link()">Click Here</button></p>
 <p id="link" style="background-color: white; border-radius: 6px;overflow-y: scroll;height: 35px;"></p>
-<button style="display: inline; margin-bottom: 0%;" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br><br>
-<button type="button"><a href="/logout">Logout</a></button>
+<button id="copy" style="display: inline; margin-bottom: 10px;" class="btn btn-primary" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br>
+<button type="button" class="btn btn-primary"><a href="/logout">Logout</a></button>
 {% endblock %}

@@ -2,9 +2,9 @@
 {% block title %}Leavemeamessage-Page{% endblock %}
 
 {% block content %}
-<h4>Leave Me A Message Anonymously </h4>
+<p style="border-top:2px solid white;border-bottom: 2px solid white;">Write a message to {{user}} anonymously</p>
 <form action="">
-    <textarea id="text"></textarea><br>
-    <button id="btn" type="button" onclick="sendmessage()">Send</button>
+    <textarea id="text" style="margin-bottom: 10px;" class="form-control" placeholder="Write something here..."></textarea>
+    <button id="btn" class="btn btn-primary" type="button" onclick="sendmessage()">Send</button>
 </form>
 {% endblock %}

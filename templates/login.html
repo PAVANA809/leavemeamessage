@@ -2,13 +2,13 @@
 {% block title %}Login-Page{% endblock %}
 
 {% block content %}
-<h1>Login</h1>
+<center><h2 class="mb-3">Login</h2></center>
 <form action="">
-    <input id="uname" type="text" placeholder="Username"><br>
-    <input id="password" type="password" placeholder="Password"><br>
+    <input id="uname" type="text" placeholder="Username" class="form-control">
+    <input id="password" type="password" placeholder="Password" class="form-control">
     <p id="login_error"></p>
-    <button type="button" onclick="login()">Login</button>
+    <button type="button" onclick="login()" class="btn btn-primary">Login</button>
     <p style="display: inline;">or</p>
-    <button type="button"><a href="/register">Register</a></button>
+    <button type="button" class="btn btn-primary"><a href="/register">Register</a></button>
 </form>
 {% endblock %}

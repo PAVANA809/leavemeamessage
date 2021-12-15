@@ -27,10 +27,27 @@ var nameflag = 0
 
 function checkname(){
   x = $("#uname").val();
-  if(x.split(" ").length > 1){
+  if(x.split(" ").length >= 2){
       $("#unameerror").html("Do not include spaces in your username");
+      nameflag = 0
+      return
   }else{
     $("#unameerror").html("")
+    nameflag = 1
+    return
+  }
+}
+var skeyflag = 0
+function skeycheck() {
+  x = $("#s_key").val();
+  if (x.split(" ").length === 1) {
+     $("#skeyerror").html("");
+     skeyflag = 1;
+     return
+  } else{
+    $("#skeyerror").html("Do not include spaces in your secrete key");
+    skeyflag = 0;
+    return
   }
 }
 
@@ -66,6 +83,22 @@ function register(){
     if(flag1 === 0 || flag2 === 0){
         alert("Enter password properly")
         return
+    }
+    if(skeyflag === 0 || nameflag === 0) {
+      alert("Enter username and secrete key properly");
+      return;
+    }
+    var uname = ""
+    uname = $("#uname").val()  
+    if(uname === ""){
+      alert("Enter username")
+      return
+    }
+    var s = ""
+    s = $("#s_key").val()
+    if (s === "") {
+      alert("Enter secrete key");
+      return;
     }
     data = {
       "Uname": $("#uname").val(),
@@ -143,4 +176,5 @@ function copyToClipboard(element) {
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+  $("#copy").html("Copied ")
 }

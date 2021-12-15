@@ -18,3 +18,7 @@ a{
 input{
     margin: 10px 0px;
 }
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
