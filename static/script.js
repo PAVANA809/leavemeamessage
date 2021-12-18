@@ -168,6 +168,7 @@ function generate_link(){
   }).catch(function(e){
     console.log(e);
   });
+  $("#copy").html("Copy Link");
 }
 
 function copyToClipboard(element) {
