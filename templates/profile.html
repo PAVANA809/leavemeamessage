@@ -3,12 +3,12 @@
 
 {% block content %}
 <center><h2 class="mb-3">Profile</h2></center>
-<p style="border-bottom: 2px solid white;
-    border-top: 2px solid white;">{{user['user']}}</p>
+<center><p style="border-bottom: 2px solid white;
+    border-top: 2px solid white;">{{user['user']}}</p></center>
 
-<p>To generate link <br> <button type="button" class="btn btn-primary" onclick="generate_link()">Click Here</button></p>
+<center><p>To generate link <br> <button type="button" class="btn btn-primary" onclick="generate_link()">Click Here</button></p></center>
 <p id="link" style="background-color: white; border-radius: 6px;overflow-y: scroll;height: 35px;"></p>
-<button id="copy" style="display: inline; margin-bottom: 10px;" class="btn btn-primary" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br>
+<center><button id="copy" style="display: inline; margin-bottom: 10px;" class="btn btn-primary" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br> </center>
 <center><h4>Messages</h4></center>
 <center id="msglist">
     {%for i in user['msg_list']%}
@@ -16,5 +16,5 @@
     {% endfor %}
 </center>
 
-<button type="button" class="btn btn-primary"><a href="/logout">Logout</a></button>
+<center style="margin-top: 4px;"><button type="button" style="padding: 0;" class="btn btn-primary"><a href="/logout">Logout</a></button></center>
 {% endblock %}
