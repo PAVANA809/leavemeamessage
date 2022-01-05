@@ -5,10 +5,12 @@ import dotenv
 from dotenv import load_dotenv
 import os
 
+from pymongo.mongo_client import MongoClient
+
 load_dotenv()
 
 MONGODB_CONNECT = os.getenv("MONGODB_CONNECT")
-# LOCALDB = os.getenv("LOCALDB")
+LOCALDB = os.getenv("LOCALDB")
 
 mongoclient = pymongo.MongoClient(MONGODB_CONNECT)
 

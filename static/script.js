@@ -37,19 +37,7 @@ function checkname(){
     return
   }
 }
-var skeyflag = 0
-function skeycheck() {
-  x = $("#s_key").val();
-  if (x.split(" ").length === 1) {
-     $("#skeyerror").html("");
-     skeyflag = 1;
-     return
-  } else{
-    $("#skeyerror").html("Do not include spaces in your secrete key");
-    skeyflag = 0;
-    return
-  }
-}
+
 
 var flag1 = 0
 var flag2 = 0
@@ -84,8 +72,8 @@ function register(){
         alert("Enter password properly")
         return
     }
-    if(skeyflag === 0 || nameflag === 0) {
-      alert("Enter username and secrete key properly");
+    if(nameflag === 0) {
+      alert("Enter username properly");
       return;
     }
     var uname = ""
@@ -94,16 +82,9 @@ function register(){
       alert("Enter username")
       return
     }
-    var s = ""
-    s = $("#s_key").val()
-    if (s === "") {
-      alert("Enter secrete key");
-      return;
-    }
     data = {
       "Uname": $("#uname").val(),
-      "Password": $("#password").val(),
-      "Skey": $("#s_key").val()
+      "Password": $("#password").val()
     }
     fetch("/register", {
       method: "POST",
