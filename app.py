@@ -101,7 +101,7 @@ def profile():
             x = i
         profile_data = {
             "user":user,
-            "msg_list":x['Msg']
+            "msg_list": x['Msg']
         }
         return render_template("profile.html",user=profile_data)
     return redirect(url_for("login"))

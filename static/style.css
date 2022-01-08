@@ -3,10 +3,19 @@ body{
     max-width: 500px;
     margin: 30px auto;
     border: 5px solid rgb(222, 104, 238);
-    padding: 25px;
+    padding: 0px;
     border-radius: 5px;
+    /* background-image: url('https://media.istockphoto.com/photos/exclamation-mark-background-picture-id1150102780'); */
+    background-blend-mode: color-burn;
 }
-
+#mainblock{
+    background-color: rgb(118, 114, 167);   
+    opacity: 0.9;
+}
+#footerblock{
+     background-color: rgb(118, 114, 167);
+     opacity: 0.9;
+}
 textarea{
     margin: 15px 15px 20px 0px;
 }

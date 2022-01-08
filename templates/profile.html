@@ -11,7 +11,7 @@
 <center><button id="copy" style="display: inline; margin-bottom: 10px;" class="btn btn-primary" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br> </center>
 <center><h4>Messages</h4></center>
 <center id="msglist">
-    {%for i in user['msg_list']%}
+    {%for i in user['msg_list'][::-1] %}
     <p style="border-bottom: 2px solid black;">{{i}}</p>
     {% endfor %}
 </center>

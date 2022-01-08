@@ -2,7 +2,8 @@
 {% block title %}Register-Page{% endblock %}
 {% block content %}
     <center><h2 class="mb-3">Register</h2></center>
-    <form action="">
+    <center>
+        <form action="">
         
         <input type="text" placeholder="Username" onchange="checkname()" id="uname" class="form-control">
         <p id="unameerror"></p>
@@ -11,11 +12,12 @@
         <p style="font-size: 13px;color: red; padding: 0%;margin: 0%;" id="plength"></p>
         
         
-        <input style="margin-bottom: 0px;" type="password" placeholder="Confirm Password" onchange="checkpassword()" id="pw" class="form-control">
+        <input style="margin-bottom: 5px;" type="password" placeholder="Confirm Password" onchange="checkpassword()" id="pw" class="form-control">
         <p style="font-size: 13px;color: red; padding: 0%;margin: 0%;" id="err"></p>
         
         <button type="button" id="btn" onclick="register()" class="btn btn-primary">Register</button>
         <p style="display: inline;">or</p>
         <button class="btn btn-primary"><a href="/login">Login</a></button>
     </form>
+    </center>
 {% endblock %}
