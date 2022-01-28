@@ -160,3 +160,32 @@ function copyToClipboard(element) {
   $temp.remove();
   $("#copy").html("Copied ")
 }
+
+
+function deletemsg(x){
+  comfirm = confirm("do you want to delete?")
+  if(comfirm){
+    var v = "msg_" + x;
+    msgs = document.getElementById(v).innerHTML;
+    data = {
+      msg: msgs,
+    };
+    fetch("/delete", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then(function (json) {
+        x = "div" + x;
+        document.getElementById(x).classList.add("nonecls");
+      })
+      .catch(function (e) {
+        console.log(e);
+      });
+  }else{
+   return;  
+  }
+}

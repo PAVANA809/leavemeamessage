@@ -106,5 +106,14 @@ def profile():
         return render_template("profile.html",user=profile_data)
     return redirect(url_for("login"))
 
+
+@app.route("/delete",methods=["GET","POST"])
+def delete():
+    if request.method == "POST":
+        if "user" in session:
+            data = request.get_json(force=True)
+            crud.lmam['messages'].update_one({'To': session['user']}, {'$pull': {'Msg': data["msg"]}})
+            return jsonify({"msg": "deleted"})
+
 if __name__ == "__main__":
     app.run(debug=True)

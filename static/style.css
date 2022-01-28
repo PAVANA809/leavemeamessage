@@ -43,3 +43,17 @@ p{
 #msglist p{
     margin-bottom: 4px;
 }
+
+#delete-btn::hover{
+    background-color: red;
+}
+
+.msgdiv{
+    border-bottom: 2px solid black; 
+    display: grid; 
+    grid-template-columns: 85% 15%;
+}
+
+.nonecls{
+    display: none;
+}

@@ -11,8 +11,13 @@
 <center><button id="copy" style="display: inline; margin-bottom: 10px;" class="btn btn-primary" type="button" onclick="copyToClipboard('#link')">Copy Link</button><br> </center>
 <center><h4>Messages</h4></center>
 <center id="msglist">
+    {% set count = namespace(value=0) %}
     {%for i in user['msg_list'][::-1] %}
-    <p style="border-bottom: 2px solid black;">{{i}}</p>
+    <div id="div{{count.value }}" class="msgdiv">
+    <p id="msg_{{ count.value }}">{{i}}</p>
+    <i id = "{{count.value}}" class="fas fa-trash" style="margin: auto auto;" onclick="deletemsg(this.id)"></i>
+    {% set count.value = count.value + 1 %}
+    </div>
     {% endfor %}
 </center>
 
