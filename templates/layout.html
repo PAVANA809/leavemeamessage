@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3507316425044293"
-     crossorigin="anonymous"></script>
+    {% block adhead %}{% endblock %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,39 +26,15 @@
 </head>
 <body>
     <div id="mainblock">
-       <center>
-         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3507316425044293"
-        crossorigin="anonymous"></script>
-    <!-- lmam_ads -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-3507316425044293"
-        data-ad-slot="7778948327"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-       </center> 
       {% block content %}{% endblock %}
     </div>
     <div id="footerblock">
       <hr style="height: 6px; background-color: white;margin-bottom: 0%;">
-    <center><div id="footer">
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3507316425044293"
-        crossorigin="anonymous"></script>
-    <!-- lmam_ads -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-3507316425044293"
-        data-ad-slot="7778948327"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script> 
+    <center>
+      <div id="footer">
       <p style="margin-bottom: 3px;">If you find any issues contact here <a href="https://t.me/Pavan_809" style="padding: 0;" class="btn btn-primary">Contact</a></p>
-    </div></center>
+    </div>
+  </center>
     <hr style="height: 6px; background-color: white;  margin-top: 0%;">
     </div>
     <script
